@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex cart-outer-div">
-      <Header />
+    <Header />
     <div class="cart-body">
       <div v-if="totalPrice !== 0" class="container mb-5">
         <h4 class="my-4 my-cart">My Cart</h4>
@@ -41,7 +41,6 @@
                     </div>
                     <h6 class="mt-15">{{ items.price }}</h6>
                   </div>
-                  <!-- <div class="line">{{}}</div> -->
                 </li>
               </ul>
             </div>
@@ -80,9 +79,9 @@ export default {
     removeItem(items) {
       this.$store.dispatch("removeItem", items);
     },
-    checkout(){
-        this.$router.push("/checkout");
-    }
+    checkout() {
+      this.$router.push("/checkout");
+    },
   },
   computed: {
     cartItems() {

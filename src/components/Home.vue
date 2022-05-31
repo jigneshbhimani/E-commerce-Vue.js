@@ -3,7 +3,6 @@
     <Header />
     <div class="content">
       <div class="container mb-5">
-        <!-- <h4 class="my-4 fw-600 d-blue"></h4> -->
         <div class="row">
           <div
             @click="productDetails(items)"
