@@ -15,7 +15,7 @@ const routes = [
     name: "login",
     component: () => import("../components/Login.vue"),
   },
-  { path: "/products", component: Home },
+  { path: "/products", component: Home, name: "products" },
   {
     path: "/product-details",
     name: "product-details",

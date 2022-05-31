@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header">
-      <div @click="goTo('home')" class="product-header">
+      <div @click="goTo('products')" class="product-header">
         <h4 class="product">Products</h4>
       </div>
       <div class="d-flex cart">
@@ -27,7 +27,7 @@ export default {
   name: "Header",
   methods: {
     goTo(page) {
-      page === "home" ? this.$router.push("/") : this.$router.push("/cart");
+      page === "products" ? this.$router.push("/products") : this.$router.push("/cart");
     },
     logout() {
       this.$router.push("/login");
