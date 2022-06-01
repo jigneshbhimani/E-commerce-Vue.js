@@ -6,6 +6,7 @@
       <h5 class="darkblue fw-600">
         You can go to home page to view more products.
       </h5>
+      <a href="/products">Buy Products</a>
     </div>
   </div>
 </template>
