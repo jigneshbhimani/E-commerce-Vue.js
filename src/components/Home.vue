@@ -18,7 +18,7 @@
             />
             <br />
             <br />
-            <h5 class="fw-600 black">{{ items.title }}</h5>
+            <h5 class="fw-600 black">{{ items.title }} - Rs.{{items.price}}</h5>
             <hr />
             <br />
           </div>
