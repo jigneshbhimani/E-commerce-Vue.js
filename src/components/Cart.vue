@@ -50,6 +50,17 @@
           class="d-flex justify-content-end"
           style="width: 80%; margin-top: 2%"
         >
+          <div>
+            <stripe-checkout
+              ref="checkoutRef"
+              mode="payment"
+              :pk="publishableKey"
+              :line-items="lineItems"
+              :success-url="successURL"
+              :cancel-url="cancelURL"
+              @loading="(v) => (loading = v)"
+            />
+          </div>
           <button @click="checkout" type="button" class="btn btn-primary">
             Checkout
           </button>
@@ -64,6 +75,7 @@
 import Header from "../components/common/Header.vue";
 import EmptyCart from "../components/EmptyCart.vue";
 import Summary from "../components/Summary.vue";
+import { StripeCheckout } from "@vue-stripe/vue-stripe";
 
 export default {
   name: "Cart",
@@ -71,6 +83,26 @@ export default {
     Header,
     EmptyCart,
     Summary,
+    StripeCheckout,
+  },
+  data() {
+    this.publishableKey =
+      "pk_test_51J8J6pSIIkglpNEV5DvCWLA9xNSLN3WeYUzHZrVzbrRcjz7sVvP4wZ5nYZzIVpIBKR6EpUM4IZO4Vd3ux76Rt34800sRhUy8aI";
+    return {
+      loading: false,
+      lineItems: [
+        {
+          price: "price_1L5k0ASIIkglpNEVMYZLsR7a",
+          quantity: 1,
+        },
+        // {
+        //   price: "price_1L5k1sSIIkglpNEVz3GStoo2",
+        //   quantity: 1,
+        // },
+      ],
+      successURL: "http://localhost:8080/success",
+      cancelURL: "http://localhost:8080/error",
+    };
   },
   methods: {
     addItem(items) {
@@ -80,7 +112,7 @@ export default {
       this.$store.dispatch("removeItem", items);
     },
     checkout() {
-      this.$router.push("/checkout");
+      this.$refs.checkoutRef.redirectToCheckout();
     },
   },
   computed: {

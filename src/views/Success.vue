@@ -1,17 +1,18 @@
 <template>
   <div>
-    <h1 class="checkout">Your order is placed successfully!</h1>
+    <h1 class="success">Payment is successful</h1>
+    <a href="/products">Buy Again</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Checkout",
+  name: "Success",
 };
 </script>
 
 <style scoped>
-.checkout {
+.success {
     text-align: center;
     font-size: 30px;
     font-weight: bold;

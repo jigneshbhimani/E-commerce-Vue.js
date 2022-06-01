@@ -14,9 +14,13 @@
               :src="items.imageURL"
               width="300px"
               height="300px"
-              style="border-radius: 15px"
+              style="border-radius: 150px"
             />
+            <br />
+            <br />
             <h5 class="fw-600 black">{{ items.title }}</h5>
+            <hr />
+            <br />
           </div>
         </div>
       </div>

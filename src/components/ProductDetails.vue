@@ -4,14 +4,14 @@
     <div class="product-details">
       <div class="container mb-5">
         <br />
-        <h4 class="fw-600" style="color: blue;">Add Item To Cart</h4>
+        <h4 class="fw-600" style="color: blue;">Add item to cart</h4>
         <div class="row">
           <div class="col-md-4" style="cursor: pointer">
             <img
               :src="details.imageURL"
               width="300px"
               height="300px"
-              style="border-radius: 15px"
+              style="border-radius: 150px"
             />
           </div>
           <div class="col-md-4" style="cursor: pointer">

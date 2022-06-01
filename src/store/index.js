@@ -7,7 +7,7 @@ import charger from "../assets/charger.jpg";
 import fan from "../assets/fan.jpg";
 import fridge from "../assets/fridge.jpg";
 import laptop from "../assets/laptop.jpg";
-import mixer from "../assets/ac.jpg";
+import mixer from "../assets/mixer.jpg";
 import oven from "../assets/oven.jpg";
 import sm from "../assets/sm.jpg";
 import tag from "../assets/tag.jpg";
