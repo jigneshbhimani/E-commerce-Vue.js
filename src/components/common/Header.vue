@@ -27,9 +27,12 @@ export default {
   name: "Header",
   methods: {
     goTo(page) {
-      page === "products" ? this.$router.push("/products") : this.$router.push("/cart");
+      page === "products"
+        ? this.$router.push("/products")
+        : this.$router.push("/cart");
     },
     logout() {
+      localStorage.removeItem("details");
       this.$router.push("/login");
     },
   },
