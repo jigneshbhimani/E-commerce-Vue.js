@@ -48,7 +48,6 @@ export default {
         : this.$router.push("/cart");
     },
     logout() {
-      localStorage.removeItem("details");
       this.$router.push("/login");
     },
   },

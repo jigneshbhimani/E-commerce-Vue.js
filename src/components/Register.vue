@@ -47,7 +47,7 @@
         </div>
         <br />
         <div>
-          <button type="submit" class="btn btn-success">Signup</button>
+          <button type="submit" class="btn btn-outline-success">Register</button>
         </div>
         <br />
       </form>

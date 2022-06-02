@@ -27,9 +27,14 @@
         </div>
         <br />
         <div>
-          <button type="submit" class="btn btn-success">Login</button>
+          <button type="submit" class="btn btn-outline-success">Login</button>
         </div>
         <br />
+        <h6>
+          Don't Have an Account ?<button class="btn btn-link" @click="signup">
+            Sign Up
+          </button>
+        </h6>
       </form>
       <br />
     </div>
@@ -48,7 +53,7 @@ export default {
     };
   },
   components: {
-      Header
+    Header,
   },
   methods: {
     login() {
@@ -59,6 +64,10 @@ export default {
       } else {
         alert("Invalid Credentials");
       }
+    },
+    signup() {
+      localStorage.clear();
+      this.$router.push("/");
     },
   },
 };
