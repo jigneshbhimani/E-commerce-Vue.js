@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../components/Home.vue";
 
 Vue.use(VueRouter);
 
@@ -15,11 +14,25 @@ const routes = [
     name: "login",
     component: () => import("../components/Login.vue"),
   },
-  { path: "/products", component: Home, name: "products" },
+  {
+    path: "/products",
+    component: () => import("../components/Home.vue"),
+    name: "products"
+  },
+  {
+    path: "/clothes",
+    component: () => import("../components/Cloth.vue"),
+    name: "clothes",
+  },
   {
     path: "/product-details",
     name: "product-details",
     component: () => import("../components/ProductDetails.vue"),
+  },
+  {
+    path: "/cloth-details",
+    name: "cloth-details",
+    component: () => import("../components/ClothDetails.vue"),
   },
   {
     path: "/cart",
@@ -34,7 +47,7 @@ const routes = [
     path: "/error",
     name: "error",
     component: () => import("../views/Cancel.vue"),
-  }
+  },
 ];
 
 const router = new VueRouter({

@@ -1,12 +1,17 @@
 <template>
   <div class="container my-5" style="text-align: center">
-    <img src="../assets/shoppingcart.jpg" width="200px" />
+    <img src="../assets/products/shoppingcart.jpg" width="200px" />
     <div class="mt-4">
       <h4 class="orange-red fw-600">Your cart is empty</h4>
       <h5 class="darkblue fw-600">
         You can go to home page to view more products.
       </h5>
-      <a href="/products">Buy Products</a>
+      <div>
+        <a href="/products">Buy Products</a>
+      </div>
+      <div>
+        <a href="/clothes">Buy Clothes</a>
+      </div>
     </div>
   </div>
 </template>

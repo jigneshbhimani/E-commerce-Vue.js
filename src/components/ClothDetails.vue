@@ -1,10 +1,10 @@
 <template>
-  <div class="d-flex product-details-outer">
+  <div class="d-flex cloth-details-outer">
     <Header />
-    <div class="product-details">
+    <div class="cloth-details">
       <div class="container mb-5">
         <br />
-        <h4 class="fw-600" style="color: blue;">Add Products to Cart</h4>
+        <h4 class="fw-600" style="color: blue">Add Cloth to Cart</h4>
         <div class="row">
           <div class="col-md-4" style="cursor: pointer">
             <img
@@ -15,10 +15,9 @@
             />
           </div>
           <div class="col-md-4" style="cursor: pointer">
-            <h5 class="my-4 fw-600">Title: {{ details.title }}</h5>
+            <h5 class="my-4 fw-600">Name: {{ details.name }}</h5>
             <h5 class="my-4 fw-600">Price: {{ details.price }}</h5>
-            <h5 class="my-4 fw-600">Description: {{ details.description }}</h5>
-            <h5 class="my-4 fw-600">Company: {{ details.company }}</h5>
+            <h5 class="my-4 fw-600">Brand: {{ details.brand }}</h5>
             <h5 class="my-4 fw-600">Color: {{ details.color }}</h5>
             <h5 class="my-4 fw-600">Size: {{ details.size }}</h5>
             <div>
@@ -47,7 +46,7 @@
 import Header from "../components/common/Header.vue";
 
 export default {
-  name: "ProductDetails",
+  name: "ClothDetails",
   components: {
     Header,
   },
@@ -79,11 +78,11 @@ export default {
 </script>
 
 <style scoped>
-.product-details-outer {
+.cloth-details-outer {
   flex-direction: column;
   height: 100vh;
 }
-.product-details {
+.cloth-details {
   flex: 1;
   background: #efe9e2;
   overflow-y: auto;

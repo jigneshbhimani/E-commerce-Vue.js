@@ -7,8 +7,8 @@
         <br />
         <div class="row">
           <div
-            @click="productDetails(items)"
-            v-for="items in products"
+            @click="clothDetails(items)"
+            v-for="items in clothes"
             :key="items.id"
             class="col-md-4 pointer"
           >
@@ -21,7 +21,7 @@
             <br />
             <br />
             <h5 class="fw-600 black">
-              {{ items.title }} - Rs.{{ items.price }}
+              {{ items.name }} - Rs.{{ items.price }}
             </h5>
             <hr />
             <br />
@@ -36,19 +36,19 @@
 import Header from "../components/common/Header.vue";
 
 export default {
-  name: "Home",
+  name: "Cloth",
   components: {
     Header,
   },
   computed: {
-    products() {
-      return this.$store.state.products;
+    clothes() {
+      return this.$store.state.clothes;
     },
   },
   methods: {
-    productDetails(items) {
+    clothDetails(items) {
       this.$router.push({
-        name: "product-details",
+        name: "cloth-details",
         params: items,
       });
     },

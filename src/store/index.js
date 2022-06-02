@@ -1,20 +1,29 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import mobile from "../assets/mobile.jpg";
-import ac from "../assets/ac.jpg";
-import buds from "../assets/buds.jpg";
-import charger from "../assets/charger.jpg";
-import fan from "../assets/fan.jpg";
-import fridge from "../assets/fridge.jpg";
-import laptop from "../assets/laptop.jpg";
-import mixer from "../assets/mixer.jpg";
-import oven from "../assets/oven.jpg";
-import sm from "../assets/sm.jpg";
-import tag from "../assets/tag.jpg";
-import tv from "../assets/tv.jpg";
-import ucb from "../assets/ucb.jpg";
-import watch from "../assets/watch.jpg";
-import wm from "../assets/wm.jpg";
+import mobile from "../assets/products/mobile.jpg";
+import ac from "../assets/products/ac.jpg";
+import buds from "../assets/products/buds.jpg";
+import charger from "../assets/products/charger.jpg";
+import fan from "../assets/products/fan.jpg";
+import fridge from "../assets/products/fridge.jpg";
+import laptop from "../assets/products/laptop.jpg";
+import mixer from "../assets/products/mixer.jpg";
+import oven from "../assets/products/oven.jpg";
+import sm from "../assets/products/sm.jpg";
+import tag from "../assets/products/tag.jpg";
+import tv from "../assets/products/tv.jpg";
+import ucb from "../assets/products/ucb.jpg";
+import watch from "../assets/products/watch.jpg";
+import wm from "../assets/products/wm.jpg";
+import jeans from "../assets/clothes/jeans.jpg"
+import cap from "../assets/clothes/cap.jpg"
+import shirt from "../assets/clothes/shirt.jpg"
+import tshirt from "../assets/clothes/tshirt.jpg"
+import jacket from "../assets/clothes/jacket.jpg"
+import dress from "../assets/clothes/dress.jpg"
+import hoodie from "../assets/clothes/hoodie.jpg"
+import blazzer from "../assets/clothes/blazzer.jpg"
+
 
 Vue.use(Vuex);
 
@@ -177,6 +186,80 @@ export default new Vuex.Store({
         color: "Blue",
         size: "25 mm",
         imageURL: watch,
+      },
+    ],
+    clothes: [
+      {
+        id: 1,
+        name: "Shirt",
+        price: "5000",
+        brand: "Mango",
+        color: "Red-White",
+        size: "M",
+        imageURL: shirt,
+      },
+      {
+        id: 2,
+        name: "T-Shirt",
+        price: "2000",
+        brand: "Jack & Jones",
+        color: "Grey",
+        size: "L",
+        imageURL: tshirt,
+      },
+      {
+        id: 3,
+        name: "Cap",
+        price: "1000",
+        brand: "Nike",
+        color: "Red",
+        size: "25",
+        imageURL: cap,
+      },
+      {
+        id: 4,
+        name: "Jeans",
+        price: "1500",
+        brand: "Levi's",
+        color: "Blue",
+        size: "30",
+        imageURL: jeans,
+      },
+      {
+        id: 5,
+        name: "Jacket",
+        price: "3000",
+        brand: "Roadster",
+        color: "Blue-Black",
+        size: "XL",
+        imageURL: jacket,
+      },
+      {
+        id: 6,
+        name: "Hoodie",
+        price: "1200",
+        brand: "Adidas",
+        color: "Green",
+        size: "L",
+        imageURL: hoodie,
+      },
+      {
+        id: 7,
+        name: "Blazzer",
+        price: "4200",
+        brand: "Louis Philippe",
+        color: "Brown",
+        size: "XXL",
+        imageURL: blazzer,
+      },
+      {
+        id: 8,
+        name: "Dress",
+        price: "1800",
+        brand: "H&M",
+        color: "Red",
+        size: "34",
+        imageURL: dress,
       },
     ],
     cartItemCount: 0,
