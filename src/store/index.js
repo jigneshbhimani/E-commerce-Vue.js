@@ -192,7 +192,7 @@ export default new Vuex.Store({
       {
         id: 1,
         name: "Shirt",
-        price: "5000",
+        price: "3999",
         brand: "Mango",
         color: "Red-White",
         size: "M",
@@ -201,7 +201,7 @@ export default new Vuex.Store({
       {
         id: 2,
         name: "T-Shirt",
-        price: "2000",
+        price: "1799",
         brand: "Jack & Jones",
         color: "Grey",
         size: "L",
@@ -210,7 +210,7 @@ export default new Vuex.Store({
       {
         id: 3,
         name: "Cap",
-        price: "1000",
+        price: "999",
         brand: "Nike",
         color: "Red",
         size: "25",
@@ -219,7 +219,7 @@ export default new Vuex.Store({
       {
         id: 4,
         name: "Jeans",
-        price: "1500",
+        price: "1599",
         brand: "Levi's",
         color: "Blue",
         size: "30",
@@ -228,7 +228,7 @@ export default new Vuex.Store({
       {
         id: 5,
         name: "Jacket",
-        price: "3000",
+        price: "2999",
         brand: "Roadster",
         color: "Blue-Black",
         size: "XL",
@@ -237,7 +237,7 @@ export default new Vuex.Store({
       {
         id: 6,
         name: "Hoodie",
-        price: "1200",
+        price: "1199",
         brand: "Adidas",
         color: "Green",
         size: "L",
@@ -246,7 +246,7 @@ export default new Vuex.Store({
       {
         id: 7,
         name: "Blazzer",
-        price: "4200",
+        price: "4199",
         brand: "Louis Philippe",
         color: "Brown",
         size: "XXL",
@@ -255,7 +255,7 @@ export default new Vuex.Store({
       {
         id: 8,
         name: "Dress",
-        price: "1800",
+        price: "1699",
         brand: "H&M",
         color: "Red",
         size: "34",

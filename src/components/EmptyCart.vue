@@ -7,10 +7,10 @@
         You can go to home page to view more products.
       </h5>
       <div>
-        <a href="/products">Buy Products</a>
+        <router-link to="/products">Electronics</router-link>
       </div>
       <div>
-        <a href="/clothes">Buy Clothes</a>
+        <router-link to="/clothes">Cloth</router-link>
       </div>
     </div>
   </div>
