@@ -1,20 +1,20 @@
 <template>
   <header>
     <div class="header">
-      <div
-        @click="goTo('products')"
-        class="product-header"
-        style="border-right: 1px solid gray; padding-right: 20px"
-      >
-        <h4 class="product">Electronics</h4>
+      <div>
+        <select
+          name="categoryName"
+          class="form-select form-control"
+          @change="changeRoute"
+          style="margin-left: 20px; margin-top: 7px"
+          v-model="selected"
+        >
+          <option value="products">Electronics</option>
+          <option value="clothes">Cloth</option>
+          <option value="books">Book</option>
+        </select>
       </div>
-      <div
-        @click="goToCloth('clothes')"
-        class="cloth-header"
-        style="padding-right: 47px;"
-      >
-        <h4 class="cloth">Fashion</h4>
-      </div>
+
       <div class="d-flex cart">
         <img
           @click="goTo('cart')"
@@ -37,24 +37,24 @@
 export default {
   name: "Header",
   methods: {
-    goTo(page) {
-      page === "products"
-        ? this.$router.push("/products")
-        : this.$router.push("/cart");
-    },
-    goToCloth(page) {
-      page === "clothes"
-        ? this.$router.push("/clothes")
-        : this.$router.push("/cart");
-    },
     logout() {
+      alert("Logout Successfully");
       this.$router.push("/login");
+    },
+    changeRoute(e) {
+      console.log(this.key,"KEY")
+      this.$router.push(e.target.value);
     },
   },
   computed: {
     count() {
       return this.$store.state.cartItemCount;
     },
+  },
+  data() {
+    return {
+      key: "",
+    };
   },
 };
 </script>
@@ -66,23 +66,23 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-.product-header {
+.category {
   display: flex;
-  margin-left: 15px;
-  padding: 6px;
-  cursor: pointer;
 }
-.cloth-header {
-  display: flex;
-  margin-right: 40rem;
+.product-header,
+.cloth-header,
+.book-header {
   padding: 6px;
   cursor: pointer;
 }
 .product,
-.cloth {
+.cloth,
+.book {
   color: deeppink;
   font-weight: 600;
+  font-size: 20px;
   margin-top: 7px;
+  text-decoration: underline solid black 2px;
 }
 .cart-count {
   font-size: 15px;

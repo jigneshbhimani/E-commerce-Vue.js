@@ -31,7 +31,7 @@
         </div>
         <br />
         <h6>
-          Don't Have an Account ?<button class="btn btn-link" @click="signup">
+          Don't have an account?<button class="btn btn-link" @click="signup">
             Sign Up
           </button>
         </h6>
@@ -59,7 +59,13 @@ export default {
     login() {
       var data = JSON.parse(localStorage.getItem("user"));
       if (data.email == this.email && data.password == this.password) {
-        console.log("Login Successfully");
+        // alert("Login Successfully");
+        this.$notify({
+          title: "Login Successfully",
+          message: "Login Successfully",
+          type: "success",
+          duration: "2000"
+        })
         this.$router.push("/products");
       } else {
         alert("Invalid Credentials");

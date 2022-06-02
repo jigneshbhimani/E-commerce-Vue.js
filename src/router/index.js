@@ -25,6 +25,11 @@ const routes = [
     name: "clothes",
   },
   {
+    path: "/books",
+    component: () => import("../components/Book.vue"),
+    name: "books",
+  },
+  {
     path: "/product-details",
     name: "product-details",
     component: () => import("../components/ProductDetails.vue"),
@@ -33,6 +38,11 @@ const routes = [
     path: "/cloth-details",
     name: "cloth-details",
     component: () => import("../components/ClothDetails.vue"),
+  },
+  {
+    path: "/boook-details",
+    name: "book-details",
+    component: () => import("../components/BookDetails.vue"),
   },
   {
     path: "/cart",

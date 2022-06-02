@@ -4,7 +4,7 @@
     <div class="product-details">
       <div class="container mb-5">
         <br />
-        <h4 class="fw-600" style="color: blue;">Add Products to Cart</h4>
+        <h4 class="fw-600" style="color: blue">Add Products to Cart</h4>
         <div class="row">
           <div class="col-md-4" style="cursor: pointer">
             <img
@@ -15,24 +15,24 @@
             />
           </div>
           <div class="col-md-4" style="cursor: pointer">
-            <h5 class="my-4 fw-600">Title: {{ details.title }}</h5>
-            <h5 class="my-4 fw-600">Price: {{ details.price }}</h5>
-            <h5 class="my-4 fw-600">Description: {{ details.description }}</h5>
-            <h5 class="my-4 fw-600">Company: {{ details.company }}</h5>
-            <h5 class="my-4 fw-600">Color: {{ details.color }}</h5>
-            <h5 class="my-4 fw-600">Size: {{ details.size }}</h5>
+            <h5 class="my-4"><b>Title: </b>{{ details.title }}</h5>
+            <h5 class="my-4"><b>Price: </b>{{ details.price }}</h5>
+            <h5 class="my-4"><b>Description: </b>{{ details.description }}</h5>
+            <h5 class="my-4"><b>Company: </b>{{ details.company }}</h5>
+            <h5 class="my-4"><b>Color: </b>{{ details.color }}</h5>
+            <h5 class="my-4"><b>Size: </b>{{ details.size }}</h5>
             <div>
-              <button @click="goToCart" class="btn btn-primary">
+              <button @click="goToCart" class="btn btn-outline-primary">
                 Go to Cart
               </button>
               <button
                 @click="addToCart"
                 style="margin-right: 5px; margin-left: 5px"
-                class="btn btn-success"
+                class="btn btn-outline-success"
               >
                 Add Item
               </button>
-              <button @click="removeItem" class="btn btn-danger">
+              <button @click="removeItem" class="btn btn-outline-danger">
                 Remove Item
               </button>
             </div>

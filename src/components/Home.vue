@@ -21,10 +21,9 @@
             <br />
             <br />
             <h5 class="fw-600 black">
-              {{ items.title }} - Rs.{{ items.price }}
+              {{ items.title }}
             </h5>
             <hr />
-            <br />
           </div>
         </div>
       </div>
@@ -72,9 +71,6 @@ export default {
 }
 .d-blue {
   color: dodgerblue;
-}
-.black {
-  color: black;
 }
 .pointer {
   cursor: pointer;

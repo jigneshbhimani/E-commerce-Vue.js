@@ -47,10 +47,18 @@
         </div>
         <br />
         <div>
-          <button type="submit" class="btn btn-outline-success">Register</button>
+          <button type="submit" class="btn btn-outline-success">
+            Register
+          </button>
         </div>
         <br />
+        <h6>
+          Already registered?<button class="btn btn-link" @click="login">
+            Login
+          </button>
+        </h6>
       </form>
+      <br />
     </div>
   </div>
 </template>
@@ -80,7 +88,10 @@ export default {
         password: this.password,
       };
       localStorage.setItem("user", JSON.stringify(user));
-      console.log("Signup Successfully");
+      alert("Signup Successfully");
+      this.$router.push("/login");
+    },
+    login() {
       this.$router.push("/login");
     },
   },

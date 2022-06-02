@@ -1,5 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
+
+// Electronics
 import mobile from "../assets/products/mobile.jpg";
 import ac from "../assets/products/ac.jpg";
 import buds from "../assets/products/buds.jpg";
@@ -15,15 +17,23 @@ import tv from "../assets/products/tv.jpg";
 import ucb from "../assets/products/ucb.jpg";
 import watch from "../assets/products/watch.jpg";
 import wm from "../assets/products/wm.jpg";
-import jeans from "../assets/clothes/jeans.jpg"
-import cap from "../assets/clothes/cap.jpg"
-import shirt from "../assets/clothes/shirt.jpg"
-import tshirt from "../assets/clothes/tshirt.jpg"
-import jacket from "../assets/clothes/jacket.jpg"
-import dress from "../assets/clothes/dress.jpg"
-import hoodie from "../assets/clothes/hoodie.jpg"
-import blazzer from "../assets/clothes/blazzer.jpg"
 
+// Clothes
+import jeans from "../assets/clothes/jeans.jpg";
+import cap from "../assets/clothes/cap.jpg";
+import shirt from "../assets/clothes/shirt.jpg";
+import tshirt from "../assets/clothes/tshirt.jpg";
+import jacket from "../assets/clothes/jacket.jpg";
+import dress from "../assets/clothes/dress.jpg";
+import hoodie from "../assets/clothes/hoodie.jpg";
+import blazzer from "../assets/clothes/blazzer.jpg";
+
+// Books
+import harry1 from "../assets/books/harry1.jpg";
+import man from "../assets/books/man.jpg";
+import sun from "../assets/books/sun.jpg";
+import finn from "../assets/books/finn.png";
+import lord from "../assets/books/lord.jpg";
 
 Vue.use(Vuex);
 
@@ -260,6 +270,48 @@ export default new Vuex.Store({
         color: "Red",
         size: "34",
         imageURL: dress,
+      },
+    ],
+    books: [
+      {
+        id: 1,
+        name: "Harry Potter and the Deathly Hallows",
+        author: "J. K. Rowling",
+        price: "3000",
+        imageURL: harry1,
+        published: "11 January 1994"
+      },
+      {
+        id: 2,
+        name: "Invisible Man",
+        author: "Ralph Ellison",
+        price: "2400",
+        imageURL: man,
+        published: "14 April 1952"
+      },
+      {
+        id: 3,
+        name: "The Sun Also Rises",
+        author: "Ernest Hemingway",
+        price: "2499",
+        imageURL: sun,
+        published: "1 January 1970"
+      },
+      {
+        id: 4,
+        name: "Adventures of Huckleberry Finn",
+        author: "Mark Twain",
+        price: "1799",
+        imageURL: finn,
+        published: "15 March 1964"
+      },
+      {
+        id: 5,
+        name: "The Lord of the Rings",
+        author: "J. R. R. Tolkien",
+        price: "2199",
+        imageURL: lord,
+        published: "24 November 1998"
       },
     ],
     cartItemCount: 0,
