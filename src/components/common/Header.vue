@@ -1,60 +1,60 @@
 <template>
-  <header>
-    <div class="header">
-      <div>
-        <select
-          name="categoryName"
-          class="form-select form-control"
-          @change="changeRoute"
-          style="margin-left: 20px; margin-top: 7px"
-          v-model="selected"
-        >
-          <option value="products">Electronics</option>
-          <option value="clothes">Cloth</option>
-          <option value="books">Book</option>
-        </select>
-      </div>
-
-      <div class="d-flex cart">
-        <img
-          @click="goTo('cart')"
-          src="../../assets/products/shoppingcart.jpg"
-          width="40px"
-          height="40px"
-          style="margin-top: 6px"
-        />
-        <span class="cart-count">{{ count }}</span>
-
-        <h5 class="login">
-          <button class="btn btn-primary" @click="logout">Logout</button>
-        </h5>
-      </div>
+  <!-- <header> -->
+  <div class="header">
+    <div>
+      <v-select
+        class="form-control"
+        v-model="selected"
+        :items="items"
+        @input="onInput"
+        style="margin-left: 20px; margin-top: 7px"
+      />
     </div>
-  </header>
+
+    <div class="d-flex cart">
+      <img
+        @click="goTo"
+        src="../../assets/products/shoppingcart.jpg"
+        width="40px"
+        height="40px"
+        style="margin-top: 6px"
+      />
+      <span class="cart-count">{{ count }}</span>
+
+      <h5 class="login">
+        <button class="btn btn-primary" @click="logout">Logout</button>
+      </h5>
+    </div>
+  </div>
+  <!-- </header> -->
 </template>
 
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      selected: null,
+      items: ["Electronics", "Cloth", "Book"],
+    };
+  },
   methods: {
     logout() {
       alert("Logout Successfully");
       this.$router.push("/login");
     },
-    changeRoute(e) {
-      console.log(this.key,"KEY")
-      this.$router.push(e.target.value);
+    onInput() {
+      console.log(this.selected);
+      // this.$router.push(this.selected);
+    },
+    goTo() {
+      this.$router.push("/cart");
     },
   },
   computed: {
     count() {
       return this.$store.state.cartItemCount;
     },
-  },
-  data() {
-    return {
-      key: "",
-    };
   },
 };
 </script>

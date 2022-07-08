@@ -60,12 +60,6 @@ export default {
       var data = JSON.parse(localStorage.getItem("user"));
       if (data.email == this.email && data.password == this.password) {
         // alert("Login Successfully");
-        this.$notify({
-          title: "Login Successfully",
-          message: "Login Successfully",
-          type: "success",
-          duration: "2000"
-        })
         this.$router.push("/products");
       } else {
         alert("Invalid Credentials");

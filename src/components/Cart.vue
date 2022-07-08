@@ -86,8 +86,7 @@ export default {
     StripeCheckout,
   },
   data() {
-    this.publishableKey =
-      "pk_test_51J8J6pSIIkglpNEV5DvCWLA9xNSLN3WeYUzHZrVzbrRcjz7sVvP4wZ5nYZzIVpIBKR6EpUM4IZO4Vd3ux76Rt34800sRhUy8aI";
+    this.publishableKey = "";
     return {
       loading: false,
       lineItems: [

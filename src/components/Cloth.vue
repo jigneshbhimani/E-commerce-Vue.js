@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" data-app>
     <Header />
     <div class="content">
       <div class="container mb-5">

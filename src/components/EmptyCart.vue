@@ -12,6 +12,9 @@
       <div>
         <router-link to="/clothes">Cloth</router-link>
       </div>
+      <div>
+        <router-link to="/books">Book</router-link>
+      </div>
     </div>
   </div>
 </template>
