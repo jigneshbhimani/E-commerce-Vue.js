@@ -9,7 +9,6 @@
           class="mt-3 search"
           v-model="search"
         /> -->
-
         <div class="row">
           <div
             @click="bookDetails(items)"
@@ -79,10 +78,10 @@ export default {
 .container {
   padding: 20px;
 }
-.search {
+/* .search {
   padding: 5px;
   margin: 15px;
-}
+} */
 .image {
   width: 300px;
   height: 300px;

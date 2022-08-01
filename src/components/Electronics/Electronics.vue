@@ -3,6 +3,12 @@
     <Header />
     <div class="content">
       <div class="container mb-5">
+        <!-- <input
+          type="text"
+          placeholder="Search Here..."
+          class="mt-3 search"
+          v-model="search"
+        /> -->
         <div class="row">
           <div
             @click="productDetails(items)"
@@ -29,6 +35,11 @@ export default {
   components: {
     Header,
   },
+  data() {
+    return {
+      // search: null,
+    };
+  },
   computed: {
     products() {
       return this.$store.state.products;
@@ -49,6 +60,10 @@ export default {
 .container {
   padding: 20px;
 }
+/* .search {
+  padding: 5px;
+  margin: 15px;
+} */
 .image {
   width: 300px;
   height: 300px;
