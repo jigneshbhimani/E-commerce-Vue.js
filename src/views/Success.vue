@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1 class="success">Payment is successful</h1>
-    <a href="/products">Buy Again</a>
+  <div class="success">
+    <h1>Payment is successful</h1>
+    <router-link to="/electronics">Buy Again</router-link>
   </div>
 </template>
 
@@ -13,10 +13,10 @@ export default {
 
 <style scoped>
 .success {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: #ff0000;
-    margin-top: 15rem;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 15rem;
 }
 </style>

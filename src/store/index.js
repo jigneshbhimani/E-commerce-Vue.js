@@ -279,7 +279,7 @@ export default new Vuex.Store({
         author: "J. K. Rowling",
         price: "3000",
         imageURL: harry1,
-        published: "11 January 1994"
+        published: "11 January 1994",
       },
       {
         id: 2,
@@ -287,7 +287,7 @@ export default new Vuex.Store({
         author: "Ralph Ellison",
         price: "2400",
         imageURL: man,
-        published: "14 April 1952"
+        published: "14 April 1952",
       },
       {
         id: 3,
@@ -295,7 +295,7 @@ export default new Vuex.Store({
         author: "Ernest Hemingway",
         price: "2499",
         imageURL: sun,
-        published: "1 January 1970"
+        published: "1 January 1970",
       },
       {
         id: 4,
@@ -303,7 +303,7 @@ export default new Vuex.Store({
         author: "Mark Twain",
         price: "1799",
         imageURL: finn,
-        published: "15 March 1964"
+        published: "15 March 1964",
       },
       {
         id: 5,
@@ -311,7 +311,7 @@ export default new Vuex.Store({
         author: "J. R. R. Tolkien",
         price: "2199",
         imageURL: lord,
-        published: "24 November 1998"
+        published: "24 November 1998",
       },
     ],
     cartItemCount: 0,

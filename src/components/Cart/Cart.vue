@@ -4,27 +4,18 @@
     <div class="cart-body">
       <div v-if="totalPrice !== 0" class="container mb-5">
         <h4 class="my-4 my-cart">My Cart</h4>
-        <div class="d-flex my-3" style="justify-content: space-between">
+        <div class="my-3 class-1">
           <h4 class="fw-600">Summary</h4>
-          <h4 class="fw-600" style="margin-right: 49%">Cart</h4>
+          <h4 class="fw-600 class-2">Cart</h4>
         </div>
         <div class="d-flex">
           <Summary v-bind:totalPrice="totalPrice" />
-          <div class="row" style="width: 50%">
-            <div class="col-md-12" style="max-width: 70%">
-              <ul style="padding: 0">
-                <li
-                  v-for="items in cartItems"
-                  :key="items.id"
-                  style="list-style: none"
-                >
+          <div class="row">
+            <div class="col-md-12 class-3">
+              <ul class="class-6">
+                <li v-for="items in cartItems" :key="items.id" class="class-4">
                   <div class="cart-items">
-                    <img
-                      :src="items.imageURL"
-                      width="50px"
-                      height="50px"
-                      style="border-radius: 50%"
-                    />
+                    <img :src="items.imageURL" class="image" />
                     <h6 class="mt-15">{{ items.title }}</h6>
                     <div class="d-flex mt-10">
                       <button
@@ -46,10 +37,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="d-flex justify-content-end"
-          style="width: 80%; margin-top: 2%"
-        >
+        <div class="class-5">
           <div>
             <stripe-checkout
               ref="checkoutRef"
@@ -72,9 +60,9 @@
 </template>
 
 <script>
-import Header from "../components/common/Header.vue";
-import EmptyCart from "../components/EmptyCart.vue";
-import Summary from "../components/Summary.vue";
+import Header from "../Common/Header.vue";
+import EmptyCart from "../Cart/EmptyCart.vue";
+import Summary from "../Summary.vue";
 import { StripeCheckout } from "@vue-stripe/vue-stripe";
 
 export default {
@@ -86,7 +74,8 @@ export default {
     StripeCheckout,
   },
   data() {
-    this.publishableKey = "";
+    this.publishableKey =
+      "pk_test_51J8J6pSIIkglpNEV5DvCWLA9xNSLN3WeYUzHZrVzbrRcjz7sVvP4wZ5nYZzIVpIBKR6EpUM4IZO4Vd3ux76Rt34800sRhUy8aI";
     return {
       loading: false,
       lineItems: [
@@ -94,10 +83,6 @@ export default {
           price: "price_1L5k0ASIIkglpNEVMYZLsR7a",
           quantity: 1,
         },
-        // {
-        //   price: "price_1L5k1sSIIkglpNEVz3GStoo2",
-        //   quantity: 1,
-        // },
       ],
       successURL: "http://localhost:8080/success",
       cancelURL: "http://localhost:8080/error",
@@ -130,6 +115,36 @@ export default {
 </script>
 
 <style scoped>
+.class-1 {
+  justify-content: space-between;
+  display: flex;
+}
+.class-2 {
+  margin-right: 49%;
+}
+.class-3 {
+  max-width: 70%;
+}
+.class-4 {
+  list-style: none;
+}
+.class-5 {
+  width: 80%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: end;
+}
+.class-6 {
+  padding: 0;
+}
+.image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.row {
+  width: 50%;
+}
 .cart-outer-div {
   flex-direction: column;
   height: 100vh;

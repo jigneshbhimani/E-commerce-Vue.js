@@ -1,24 +1,20 @@
 <template>
-  <div class="d-flex book-details-outer">
+  <div class="d-flex product-details-outer">
     <Header />
-    <div class="book-details">
+    <div class="product-details">
       <div class="container mb-5">
-        <br />
-        <h4 class="fw-600" style="color: blue">Add Book to Cart</h4>
+        <h4 class="fw-600" style="color: blue">Add Electronic to Cart</h4>
         <div class="row">
           <div class="col-md-4" style="cursor: pointer">
-            <img
-              :src="details.imageURL"
-              width="300px"
-              height="300px"
-              style="border-radius: 150px"
-            />
+            <img :src="details.imageURL" class="image" />
           </div>
           <div class="col-md-4" style="cursor: pointer">
-            <h5 class="my-4"><b>Name: </b>{{ details.name }}</h5>
-            <h5 class="my-4"><b>Price: </b>{{ details.price }}</h5>
-            <h5 class="my-4"><b>Author: </b>{{ details.author }}</h5>
-            <h5 class="my-4"><b>Published: </b>{{ details.published }}</h5>
+            <h5 class="my-4"><b class="head">Title: </b>{{ details.title }}</h5>
+            <h5 class="my-4"><b class="head">Price: </b>{{ details.price }}</h5>
+            <h5 class="my-4"><b class="head">Description: </b>{{ details.description }}</h5>
+            <h5 class="my-4"><b class="head">Company: </b>{{ details.company }}</h5>
+            <h5 class="my-4"><b class="head">Color: </b>{{ details.color }}</h5>
+            <h5 class="my-4"><b class="head">Size: </b>{{ details.size }}</h5>
             <div>
               <button @click="goToCart" class="btn btn-outline-primary">
                 Go to Cart
@@ -42,10 +38,10 @@
 </template>
 
 <script>
-import Header from "../components/common/Header.vue";
+import Header from "../Common/Header.vue";
 
 export default {
-  name: "BookDetails",
+  name: "ProductDetails",
   components: {
     Header,
   },
@@ -77,11 +73,22 @@ export default {
 </script>
 
 <style scoped>
-.book-details-outer {
+.image {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  padding: 10px;
+  background: gainsboro;
+}
+.container {
+  margin-top: 50px;
+  padding: 20px;
+}
+.product-details-outer {
   flex-direction: column;
   height: 100vh;
 }
-.book-details {
+.product-details {
   flex: 1;
   background: #efe9e2;
   overflow-y: auto;
@@ -92,5 +99,10 @@ export default {
 .my-4 {
   text-align: left;
   margin-left: 1rem;
+  color: darkcyan;
+}
+.head {
+  color: black;
+  font-weight: 600;
 }
 </style>

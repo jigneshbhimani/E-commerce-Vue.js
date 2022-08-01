@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1 class="cancel">Payment Failed!</h1>
-    <a href="/products">Buy Again</a>
+  <div class="cancel">
+    <h1>Payment Failed!</h1>
+    <router-link to="/electronics">Buy Again</router-link>
   </div>
 </template>
 
@@ -13,10 +13,10 @@ export default {
 
 <style scoped>
 .cancel {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: #ff0000;
-    margin-top: 15rem;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 15rem;
 }
 </style>

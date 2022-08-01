@@ -7,46 +7,46 @@ const routes = [
   {
     path: "/",
     name: "register",
-    component: () => import("../components/Register.vue"),
+    component: () => import("../components/Authentication/Register.vue"),
   },
   {
     path: "/login",
     name: "login",
-    component: () => import("../components/Login.vue"),
+    component: () => import("../components/Authentication/Login.vue"),
   },
   {
-    path: "/products",
-    component: () => import("../components/Home.vue"),
-    name: "products"
+    path: "/electronics",
+    component: () => import("../components/Electronics/Electronics.vue"),
+    name: "electronics",
   },
   {
     path: "/clothes",
-    component: () => import("../components/Cloth.vue"),
+    component: () => import("../components/Clothes/Cloth.vue"),
     name: "clothes",
   },
   {
     path: "/books",
-    component: () => import("../components/Book.vue"),
+    component: () => import("../components/Books/Book.vue"),
     name: "books",
   },
   {
-    path: "/product-details",
-    name: "product-details",
-    component: () => import("../components/ProductDetails.vue"),
+    path: "/electronic-details/:id",
+    name: "electronic-details",
+    component: () => import("../components/Electronics/ElectronicDetails.vue"),
   },
   {
-    path: "/cloth-details",
+    path: "/cloth-details/:id",
     name: "cloth-details",
-    component: () => import("../components/ClothDetails.vue"),
+    component: () => import("../components/Clothes/ClothDetails.vue"),
   },
   {
-    path: "/boook-details",
+    path: "/boook-details/:id",
     name: "book-details",
-    component: () => import("../components/BookDetails.vue"),
+    component: () => import("../components/Books/BookDetails.vue"),
   },
   {
     path: "/cart",
-    component: () => import("../components/Cart.vue"),
+    component: () => import("../components/Cart/Cart.vue"),
   },
   {
     path: "/success",

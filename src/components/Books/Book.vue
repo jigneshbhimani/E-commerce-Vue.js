@@ -3,27 +3,17 @@
     <Header />
     <div class="content">
       <div class="container mb-5">
-        <br />
-        <br />
         <div class="row">
           <div
-            @click="productDetails(items)"
-            v-for="items in products"
+            @click="bookDetails(items)"
+            v-for="items in books"
             :key="items.id"
             class="col-md-4 pointer"
           >
-            <img
-              :src="items.imageURL"
-              width="300px"
-              height="300px"
-              style="border-radius: 150px"
-            />
-            <br />
-            <br />
-            <h5 class="fw-600 black">
-              {{ items.title }}
+            <img :src="items.imageURL" class="image" />
+            <h5 class="fw-600">
+              {{ items.name }}
             </h5>
-            <hr />
           </div>
         </div>
       </div>
@@ -32,22 +22,22 @@
 </template>
 
 <script>
-import Header from "../components/common/Header.vue";
+import Header from "../Common/Header.vue";
 
 export default {
-  name: "Home",
+  name: "Book",
   components: {
     Header,
   },
   computed: {
-    products() {
-      return this.$store.state.products;
+    books() {
+      return this.$store.state.books;
     },
   },
   methods: {
-    productDetails(items) {
+    bookDetails(items) {
       this.$router.push({
-        name: "product-details",
+        name: "book-details",
         params: items,
       });
     },
@@ -56,6 +46,19 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  padding: 20px;
+}
+.image {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  padding: 10px;
+  background: gainsboro;
+}
+.row {
+  text-align: center;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -68,9 +71,8 @@ export default {
 }
 .fw-600 {
   font-weight: 600;
-}
-.d-blue {
-  color: dodgerblue;
+  padding: 20px;
+  color: teal;
 }
 .pointer {
   cursor: pointer;
