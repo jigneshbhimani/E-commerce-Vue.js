@@ -16,8 +16,6 @@
             @click="clothDetails(items)"
             v-for="items in resultQuery"
             :key="items.id"
-            :per-page="perPage"
-            :current-page="currentPage"
           >
             <img :src="items.imageURL" class="image" />
             <h5 class="fw-600">
@@ -25,14 +23,14 @@
             </h5>
           </div>
         </div>
-        <div class="pagination">
+        <!-- <div class="pagination">
           <b-pagination
             v-model="currentPage"
             :total-rows="rows"
             :per-page="perPage"
             aria-controls="my-list"
           ></b-pagination>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -49,17 +47,17 @@ export default {
   data() {
     return {
       search: null,
-      perPage: 1,
-      currentPage: 1,
+      // perPage: 1,
+      // currentPage: 1,
     };
   },
   computed: {
     clothes() {
       return this.$store.state.clothes;
     },
-    rows() {
-      return this.clothes.length;
-    },
+    // rows() {
+    //   return this.clothes.length;
+    // },
     resultQuery() {
       if (this.search) {
         return this.clothes.filter((cloth) => {
