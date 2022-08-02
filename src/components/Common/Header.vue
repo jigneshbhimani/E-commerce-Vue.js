@@ -2,7 +2,7 @@
   <div class="header">
     <div class="menu-item" @click="isOpen = !isOpen">
       <div class="category">
-        Category 
+        Category
         <transition name="Category" apear>
           <div class="sub-menu" v-if="isOpen">
             <div class="menu-item">
@@ -24,6 +24,7 @@
         ></path>
       </svg>
     </div>
+    <p class="head">E - COMMERCE</p>
     <div class="cart">
       <img @click="goTo" class="image" src="../../assets/products/cart.png" />
       <span class="cart-count">{{ count }}</span>
@@ -87,6 +88,13 @@ export default {
   position: absolute;
   color: #bb3030;
   background: black;
+}
+.head {
+  font-size: 30px;
+  font-weight: 700;
+  color: dodgerblue;
+  margin: inherit;
+  margin-left: 9rem;
 }
 .cart-count {
   font-size: 15px;
