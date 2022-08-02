@@ -2,7 +2,7 @@
   <div class="header">
     <div class="menu-item" @click="isOpen = !isOpen">
       <div class="category">
-        Category
+        Category 
         <transition name="Category" apear>
           <div class="sub-menu" v-if="isOpen">
             <div class="menu-item">

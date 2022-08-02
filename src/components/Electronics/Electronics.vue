@@ -12,10 +12,13 @@
         <div class="row">
           <div
             class="col-md-4 pointer"
-            id="my-table"
+            id="my-list"
             @click="productDetails(items)"
             v-for="items in resultQuery"
             :key="items.id"
+            :per-page="perPage"
+            :current-page="currentPage"
+            :products="resultQuery"
           >
             <img :src="items.imageURL" class="image" />
             <h5 class="fw-600">
@@ -23,14 +26,14 @@
             </h5>
           </div>
         </div>
-        <!-- <div class="pagination">
+        <div class="pagination">
           <b-pagination
             v-model="currentPage"
             :total-rows="rows"
             :per-page="perPage"
             aria-controls="my-list"
           ></b-pagination>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -47,17 +50,17 @@ export default {
   data() {
     return {
       search: null,
-      // perPage: 1,
-      // currentPage: 1,
+      perPage: 3,
+      currentPage: 1,
     };
   },
   computed: {
     products() {
       return this.$store.state.products;
     },
-    // rows() {
-    //   return this.products.length;
-    // },
+    rows() {
+      return this.products.length;
+    },
     resultQuery() {
       if (this.search) {
         return this.products.filter((electronic) => {
