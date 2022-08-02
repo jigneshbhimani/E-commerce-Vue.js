@@ -5,6 +5,9 @@
       <div class="container mb-5">
         <br />
         <h4 class="fw-600" style="color: blue">Add Cloth to Cart</h4>
+        <div class="back">
+          <button class="btn btn-primary back" @click="back">Back</button>
+        </div>
         <div class="row">
           <div class="col-md-4" style="cursor: pointer">
             <img :src="details.imageURL" class="image" />
@@ -60,6 +63,9 @@ export default {
     removeItem() {
       this.$store.dispatch("removeItem", this.details);
     },
+    back() {
+      this.$router.push("/clothes");
+    },
   },
   created() {
     if (this.$route.params.id !== undefined) {
@@ -92,6 +98,10 @@ export default {
   flex: 1;
   background: #efe9e2;
   overflow-y: auto;
+}
+.back {
+  margin-top: 10px;
+  padding: 10px;
 }
 .fw-600 {
   font-weight: 600;
