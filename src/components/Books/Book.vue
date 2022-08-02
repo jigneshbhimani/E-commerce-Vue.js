@@ -3,24 +3,35 @@
     <Header />
     <div class="content">
       <div class="container mb-5">
-        <!-- <input
+        <input
           type="text"
           placeholder="Search Here..."
           class="mt-3 search"
           v-model="search"
-        /> -->
+        />
         <div class="row">
           <div
-            @click="bookDetails(items)"
-            v-for="items in books"
-            :key="items.id"
             class="col-md-4 pointer"
+            id="my-table"
+            @click="bookDetails(items)"
+            v-for="items in resultQuery"
+            :key="items.id"
+            :per-page="perPage"
+            :current-page="currentPage"
           >
             <img :src="items.imageURL" class="image" />
             <h5 class="fw-600">
               {{ items.name }}
             </h5>
           </div>
+        </div>
+        <div class="pagination">
+          <b-pagination
+            v-model="currentPage"
+            :total-rows="rows"
+            :per-page="perPage"
+            aria-controls="my-list"
+          ></b-pagination>
         </div>
       </div>
     </div>
@@ -37,31 +48,34 @@ export default {
   },
   data() {
     return {
-      // search: null,
+      search: null,
+      perPage: 1,
+      currentPage: 1,
     };
   },
   computed: {
     books() {
       return this.$store.state.books;
     },
-    // resultSearch() {
-    //   if (this.search) {
-    //     return this.$store.state.books.filter((item) => {
-    //       return this.search
-    //         .toLowerCase()
-    //         .split(" ")
-    //         .every(
-    //           (v) =>
-    //             item.id.toString().includes(v) ||
-    //             item.name.toLowerCase().includes(v) ||
-    //             item.author.toLowerCase().includes(v) ||
-    //             item.published.toLowerCase().includes(v)
-    //         );
-    //     });
-    //   } else {
-    //     return this.$store.state.books;
-    //   }
-    // },
+    rows() {
+      return this.books.length;
+    },
+    resultQuery() {
+      if (this.search) {
+        return this.books.filter((book) => {
+          return this.search
+            .toLowerCase()
+            .split(" ")
+            .every(
+              (v) =>
+                book.name.toLowerCase().includes(v) ||
+                book.author.toLowerCase().includes(v)
+            );
+        });
+      } else {
+        return this.books;
+      }
+    },
   },
   methods: {
     bookDetails(items) {
@@ -77,11 +91,17 @@ export default {
 <style scoped>
 .container {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-/* .search {
+.search {
   padding: 5px;
-  margin: 15px;
-} */
+  margin: 30px;
+  border: 3px solid gainsboro;
+  border-radius: 20px;
+}
 .image {
   width: 300px;
   height: 300px;
@@ -109,5 +129,8 @@ export default {
 }
 .pointer {
   cursor: pointer;
+  min-width: max-content;
+  max-width: 33.33%;
+  width: 100%;
 }
 </style>

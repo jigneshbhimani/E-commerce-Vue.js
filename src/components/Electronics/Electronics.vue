@@ -3,24 +3,35 @@
     <Header />
     <div class="content">
       <div class="container mb-5">
-        <!-- <input
+        <input
           type="text"
           placeholder="Search Here..."
           class="mt-3 search"
           v-model="search"
-        /> -->
+        />
         <div class="row">
           <div
-            @click="productDetails(items)"
-            v-for="items in products"
-            :key="items.id"
             class="col-md-4 pointer"
+            id="my-table"
+            @click="productDetails(items)"
+            v-for="items in resultQuery"
+            :key="items.id"
+            :per-page="perPage"
+            :current-page="currentPage"
           >
             <img :src="items.imageURL" class="image" />
             <h5 class="fw-600">
               {{ items.title }}
             </h5>
           </div>
+        </div>
+        <div class="pagination">
+          <b-pagination
+            v-model="currentPage"
+            :total-rows="rows"
+            :per-page="perPage"
+            aria-controls="my-list"
+          ></b-pagination>
         </div>
       </div>
     </div>
@@ -37,12 +48,35 @@ export default {
   },
   data() {
     return {
-      // search: null,
+      search: null,
+      perPage: 1,
+      currentPage: 1,
     };
   },
   computed: {
     products() {
       return this.$store.state.products;
+    },
+    rows() {
+      return this.products.length;
+    },
+    resultQuery() {
+      if (this.search) {
+        return this.products.filter((electronic) => {
+          return this.search
+            .toLowerCase()
+            .split(" ")
+            .every(
+              (v) =>
+                electronic.title.toLowerCase().includes(v) ||
+                electronic.company.toLowerCase().includes(v) ||
+                electronic.color.toLowerCase().includes(v) ||
+                electronic.size.toLowerCase().includes(v)
+            );
+        });
+      } else {
+        return this.products;
+      }
     },
   },
   methods: {
@@ -59,11 +93,17 @@ export default {
 <style scoped>
 .container {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-/* .search {
+.search {
   padding: 5px;
-  margin: 15px;
-} */
+  margin: 30px;
+  border: 3px solid gainsboro;
+  border-radius: 20px;
+}
 .image {
   width: 300px;
   height: 300px;
@@ -91,5 +131,8 @@ export default {
 }
 .pointer {
   cursor: pointer;
+  min-width: max-content;
+  max-width: 33.33%;
+  width: 100%;
 }
 </style>
