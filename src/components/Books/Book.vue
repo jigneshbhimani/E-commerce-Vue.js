@@ -12,17 +12,17 @@
         <div class="row">
           <div
             class="col-md-4 pointer"
-            id="my-table"
-            @click="bookDetails(items)"
-            v-for="items in resultQuery"
-            :key="items.id"
+            id="my-list"
+            @click="bookDetails(books)"
+            v-for="books in resultQuery"
+            :key="books.id"
             :per-page="perPage"
             :current-page="currentPage"
             :books="resultQuery"
           >
-            <img :src="items.imageURL" class="image" />
+            <img :src="books.imageURL" class="image" />
             <h5 class="fw-600">
-              {{ items.name }}
+              {{ books.name }}
             </h5>
           </div>
         </div>

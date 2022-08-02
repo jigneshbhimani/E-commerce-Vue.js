@@ -12,7 +12,7 @@
         <div class="row">
           <div
             class="col-md-4 pointer"
-            id="my-table"
+            id="my-list"
             @click="clothDetails(items)"
             v-for="items in resultQuery"
             :key="items.id"
@@ -26,7 +26,7 @@
             </h5>
           </div>
         </div>
-        <div class="overflow-auto">
+        <div class="pagination">
           <b-pagination
             v-model="currentPage"
             :total-rows="rows"
