@@ -6,7 +6,7 @@
         <div class="container mb-5">
           <input
             type="text"
-            placeholder="Search Books..."
+            placeholder="Search Shoes..."
             class="mt-3 search"
             v-model="search"
           />
@@ -14,7 +14,7 @@
             <div
               class="col-md-4 pointer"
               id="my-list"
-              @click="bookDetails(items)"
+              @click="shoesDetails(items)"
               v-for="items in resultQuery"
               :key="items.id"
             >
@@ -44,7 +44,7 @@ import Header from "../Common/Header.vue";
 import Footer from "../Common/Footer.vue";
 
 export default {
-  name: "Book",
+  name: "Shoes",
   components: {
     Header,
     Footer,
@@ -57,33 +57,29 @@ export default {
     };
   },
   computed: {
-    books() {
-      return this.$store.state.books;
+    shoes() {
+      return this.$store.state.shoes;
     },
     rows() {
-      return this.books.length;
+      return this.shoes.length;
     },
     resultQuery() {
       if (this.search) {
-        return this.books.filter((book) => {
+        return this.shoes.filter((shoe) => {
           return this.search
             .toLowerCase()
             .split(" ")
-            .every(
-              (v) =>
-                book.name.toLowerCase().includes(v) ||
-                book.author.toLowerCase().includes(v)
-            );
+            .every((v) => shoe.name.toLowerCase().includes(v));
         });
       } else {
-        return this.books;
+        return this.shoes;
       }
     },
   },
   methods: {
-    bookDetails(items) {
+    shoesDetails(items) {
       this.$router.push({
-        name: "book-details",
+        name: "shoes-details",
         params: items,
       });
     },

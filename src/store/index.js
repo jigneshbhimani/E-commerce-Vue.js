@@ -35,6 +35,18 @@ import sun from "../assets/books/sun.jpg";
 import finn from "../assets/books/finn.png";
 import lord from "../assets/books/lord.jpg";
 
+// Shoes
+import nike from "../assets/Shoes/nike.jpg";
+import adidas from "../assets/Shoes/adidas.jpg";
+import asics from "../assets/Shoes/asics.jpg";
+import puma from "../assets/Shoes/puma.jpg";
+import skechers from "../assets/Shoes/skechers.jpg";
+import reebok from "../assets/Shoes/reebok.jpg";
+
+// Toys
+import car from "../assets/toys/car.jpg";
+import doll from "../assets/toys/doll.jpg";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -220,9 +232,9 @@ export default new Vuex.Store({
       {
         id: 3,
         name: "Cap",
-        price: "999",
-        brand: "Nike",
-        color: "Red",
+        price: "2999",
+        brand: "Supreme",
+        color: "Blue - Red",
         size: "25",
         imageURL: cap,
       },
@@ -312,6 +324,80 @@ export default new Vuex.Store({
         price: "2199",
         imageURL: lord,
         published: "24 November 1998",
+      },
+    ],
+    toys: [
+      {
+        id: 1,
+        name: "car",
+        price: "599",
+        description: "Racing car with remote",
+        color: "White and Blue",
+        imageURL: car,
+      },
+      {
+        id: 2,
+        name: "doll",
+        price: "729",
+        description: "Barbie Doll, Cloth and Makeup Things",
+        color: "White and Pink",
+        imageURL: doll,
+      },
+    ],
+    shoes: [
+      {
+        id: 1,
+        title: "Adidas",
+        price: "2999",
+        brand: "Adidas",
+        color: "Black",
+        size: "8",
+        imageURL: adidas,
+      },
+      {
+        id: 2,
+        title: "Nike",
+        price: "4899",
+        brand: "Nike",
+        color: "White",
+        size: "9",
+        imageURL: nike,
+      },
+      {
+        id: 3,
+        title: "Asics",
+        price: "3899",
+        brand: "Asics",
+        color: "Gray",
+        size: "9",
+        imageURL: asics,
+      },
+      {
+        id: 3,
+        title: "Skechers",
+        price: "3899",
+        brand: "Skechers",
+        color: "Gray",
+        size: "9",
+        imageURL: skechers,
+      },
+      {
+        id: 3,
+        title: "Puma",
+        price: "3899",
+        brand: "Puma",
+        color: "Gray",
+        size: "9",
+        imageURL: puma,
+      },
+      {
+        id: 6,
+        title: "Reebok",
+        price: "3899",
+        brand: "Reebok",
+        color: "",
+        size: "10",
+        imageURL: reebok,
       },
     ],
     cartItemCount: 0,

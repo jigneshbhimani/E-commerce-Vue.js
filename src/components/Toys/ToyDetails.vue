@@ -1,12 +1,12 @@
 <template>
-  <div class="d-flex book-details-outer">
+  <div class="d-flex product-details-outer">
     <Header />
-    <div class="book-details">
+    <div class="product-details">
       <div class="container mb-5">
         <div class="div">
           <img src="../../assets/back.png" class="back" @click="back" />
         </div>
-        <h4 class="fw-600 class-3">Add Book to Cart</h4>
+        <h4 class="fw-600 class-3">Add Toy to Cart</h4>
         <div class="row">
           <div class="col-md-4 class-1">
             <img :src="details.imageURL" class="image" />
@@ -15,11 +15,9 @@
             <h5 class="my-4"><b class="head">Name: </b>{{ details.name }}</h5>
             <h5 class="my-4"><b class="head">Price: </b>{{ details.price }}</h5>
             <h5 class="my-4">
-              <b class="head">Author: </b>{{ details.author }}
+              <b class="head">Description: </b>{{ details.description }}
             </h5>
-            <h5 class="my-4">
-              <b class="head">Published: </b>{{ details.published }}
-            </h5>
+            <h5 class="my-4"><b class="head">Color: </b>{{ details.color }}</h5>
             <div>
               <button @click="goToCart" class="btn btn-outline-primary">
                 Go to Cart
@@ -47,7 +45,7 @@ import Header from "../Common/Header.vue";
 import Footer from "../Common/Footer.vue";
 
 export default {
-  name: "BookDetails",
+  name: "ToyDetails",
   components: {
     Header,
     Footer,
@@ -68,7 +66,7 @@ export default {
       this.$store.dispatch("removeItem", this.details);
     },
     back() {
-      this.$router.push("/books");
+      this.$router.push("/toys");
     },
   },
   created() {
@@ -87,15 +85,12 @@ export default {
 .class-2 {
   cursor: pointer;
 }
-.cart-btn {
-  margin-left: 5px;
-  margin-right: 5px;
-}
 .class-3 {
   color: blue;
 }
-.container {
-  padding: 20px;
+.cart-btn {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .image {
   width: 300px;
@@ -104,9 +99,17 @@ export default {
   padding: 10px;
   background: gainsboro;
 }
-.book-details-outer {
+.container {
+  padding: 20px;
+}
+.product-details-outer {
   flex-direction: column;
   height: 100vh;
+}
+.product-details {
+  flex: 1;
+  background: #efe9e2;
+  overflow-y: auto;
 }
 .div {
   display: flex;
@@ -115,13 +118,8 @@ export default {
 }
 .back {
   padding: 10px;
-  height: 50px;
   width: 50px;
-}
-.book-details {
-  flex: 1;
-  background: #efe9e2;
-  overflow-y: auto;
+  height: 50px;
 }
 .fw-600 {
   font-weight: 600;

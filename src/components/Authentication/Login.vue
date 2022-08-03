@@ -35,11 +35,13 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "../Common/Header.vue";
+import Footer from "../Common/Footer.vue";
 
 export default {
   name: "Signup",
@@ -51,13 +53,14 @@ export default {
   },
   components: {
     Header,
+    Footer,
   },
   methods: {
     login() {
       var data = JSON.parse(localStorage.getItem("user"));
       if (data.email == this.email && data.password == this.password) {
         alert("Login Successfully");
-        this.$router.push("/electronics");
+        this.$router.push("/category");
       } else {
         alert("Invalid Credentials");
       }
@@ -75,7 +78,7 @@ export default {
   text-align: center;
   font-weight: 700;
   padding: 30px;
-  color: rgb(0, 89, 255);
+  color: black;
 }
 .form {
   padding: 30px;

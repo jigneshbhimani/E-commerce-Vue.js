@@ -4,16 +4,14 @@
     <div class="mt-4">
       <h4 class="orange-red fw-600">Your cart is empty</h4>
       <h5 class="darkblue fw-600">
-        You can go to product pages to view more products.
+        You can go to category to view more products.
       </h5>
       <div class="electronics">
-        <router-link to="/electronics">Electronics</router-link>
-      </div>
-      <div class="clothes">
-        <router-link to="/clothes">Cloth</router-link>
-      </div>
-      <div class="books">
-        <router-link to="/books">Book</router-link>
+        <router-link to="/category">
+          <abbr title="Category">
+            <img class="image" src="../../assets/category.png" />
+          </abbr>
+        </router-link>
       </div>
     </div>
   </div>
@@ -35,10 +33,10 @@ export default {
 .fw-600 {
   font-weight: 600;
 }
-.books,
-.clothes,
-.electronics {
-  padding: 7px;
+.image {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
 }
 .container {
   text-align: center;

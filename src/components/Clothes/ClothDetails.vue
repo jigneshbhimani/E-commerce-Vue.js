@@ -3,16 +3,15 @@
     <Header />
     <div class="cloth-details">
       <div class="container mb-5">
-        <br />
-        <h4 class="fw-600" style="color: blue">Add Cloth to Cart</h4>
-        <div class="back">
-          <button class="btn btn-primary back" @click="back">Back</button>
+        <div class="div">
+          <img src="../../assets/back.png" class="back" @click="back" />
         </div>
+        <h4 class="fw-600 class-2">Add Cloth to Cart</h4>
         <div class="row">
-          <div class="col-md-4" style="cursor: pointer">
+          <div class="col-md-4 class-3">
             <img :src="details.imageURL" class="image" />
           </div>
-          <div class="col-md-4" style="cursor: pointer">
+          <div class="col-md-4 class-1">
             <h5 class="my-4"><b class="head">Name: </b>{{ details.name }}</h5>
             <h5 class="my-4"><b class="head">Price: </b>{{ details.price }}</h5>
             <h5 class="my-4"><b class="head">Brand: </b>{{ details.brand }}</h5>
@@ -24,8 +23,7 @@
               </button>
               <button
                 @click="addToCart"
-                style="margin-right: 5px; margin-left: 5px"
-                class="btn btn-outline-success"
+                class="btn btn-outline-success cart-btn"
               >
                 Add Item
               </button>
@@ -37,16 +35,19 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "../Common/Header.vue";
+import Footer from "../Common/Footer.vue";
 
 export default {
   name: "ClothDetails",
   components: {
     Header,
+    Footer,
   },
   data() {
     return {
@@ -79,8 +80,18 @@ export default {
 </script>
 
 <style scoped>
+.class-1,
+.class-3 {
+  cursor: pointer;
+}
+.class-2 {
+  color: blue;
+}
+.cart-btn {
+  margin-right: 5px;
+  margin-left: 5px;
+}
 .container {
-  margin-top: 50px;
   padding: 20px;
 }
 .image {
@@ -99,9 +110,15 @@ export default {
   background: #efe9e2;
   overflow-y: auto;
 }
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .back {
-  margin-top: 10px;
   padding: 10px;
+  height: 50px;
+  width: 50px;
 }
 .fw-600 {
   font-weight: 600;

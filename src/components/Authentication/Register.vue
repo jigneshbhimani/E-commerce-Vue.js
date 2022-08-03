@@ -53,11 +53,16 @@
         </div>
       </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "../Common/Header.vue";
+import Footer from "../Common/Footer.vue";
 
 export default {
   name: "Signup",
@@ -71,6 +76,7 @@ export default {
   },
   components: {
     Header,
+    Footer,
   },
   methods: {
     signup() {
@@ -96,12 +102,12 @@ export default {
   text-align: center;
   font-weight: 700;
   padding: 30px;
-  color: rgb(0, 89, 255);
+  color: black;
 }
 .form {
   padding: 30px;
   background: rgb(204, 140, 140);
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .default {
   display: flex;

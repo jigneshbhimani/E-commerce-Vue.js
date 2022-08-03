@@ -15,6 +15,11 @@ const routes = [
     component: () => import("../components/Authentication/Login.vue"),
   },
   {
+    path: "/category",
+    name: "category",
+    component: () => import("../components/Common/Category.vue"),
+  },
+  {
     path: "/electronics",
     component: () => import("../components/Electronics/Electronics.vue"),
     name: "electronics",
@@ -30,6 +35,16 @@ const routes = [
     name: "books",
   },
   {
+    path: "/toys",
+    component: () => import("../components/Toys/Toys.vue"),
+    name: "toys",
+  },
+  {
+    path: "/shoes",
+    component: () => import("../components/Shoes/Shoes.vue"),
+    name: "shoes",
+  },
+  {
     path: "/electronic-details/:id",
     name: "electronic-details",
     component: () => import("../components/Electronics/ElectronicDetails.vue"),
@@ -43,6 +58,16 @@ const routes = [
     path: "/boook-details/:id",
     name: "book-details",
     component: () => import("../components/Books/BookDetails.vue"),
+  },
+  {
+    path: "/toy-details/:id",
+    name: "toy-details",
+    component: () => import("../components/Toys/ToyDetails.vue"),
+  },
+  {
+    path: "/shoes-details/:id",
+    name: "shoes-details",
+    component: () => import("../components/Shoes/ShoesDetails.vue"),
   },
   {
     path: "/cart",

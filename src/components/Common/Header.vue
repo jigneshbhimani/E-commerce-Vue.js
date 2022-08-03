@@ -2,7 +2,7 @@
   <div class="header">
     <div class="menu-item" @click="isOpen = !isOpen">
       <div class="category">
-        Category
+        <img src="../../assets/separation.png" class="class-1" />
         <transition name="Category" apear>
           <div class="sub-menu" v-if="isOpen">
             <div class="menu-item">
@@ -14,6 +14,12 @@
             <div class="menu-item">
               <router-link to="/books">Books</router-link>
             </div>
+            <div class="menu-item">
+              <router-link to="/toys">Toys</router-link>
+            </div>
+            <div class="menu-item">
+              <router-link to="/shoes">Shoes</router-link>
+            </div>
           </div>
         </transition>
       </div>
@@ -24,7 +30,7 @@
         ></path>
       </svg>
     </div>
-    <p class="head">E - COMMERCE</p>
+    <router-link class="head" to="/category">E - STORE</router-link>
     <div class="cart">
       <img @click="goTo" class="image" src="../../assets/products/cart.png" />
       <span class="cart-count">{{ count }}</span>
@@ -62,6 +68,10 @@ export default {
 </script>
 
 <style scoped>
+.class-1 {
+  width: 30px;
+  height: 30px;
+}
 .header {
   height: 60px;
   background: black;
@@ -94,7 +104,9 @@ export default {
   font-weight: 700;
   color: dodgerblue;
   margin: inherit;
-  margin-left: 9rem;
+  margin-left: 12rem;
+  cursor: pointer;
+  text-decoration: none;
 }
 .cart-count {
   font-size: 15px;

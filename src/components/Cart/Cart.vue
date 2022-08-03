@@ -56,11 +56,13 @@
       </div>
       <EmptyCart v-else />
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "../Common/Header.vue";
+import Footer from "../Common/Footer.vue";
 import EmptyCart from "../Cart/EmptyCart.vue";
 import Summary from "../Summary.vue";
 import { StripeCheckout } from "@vue-stripe/vue-stripe";
@@ -69,6 +71,7 @@ export default {
   name: "Cart",
   components: {
     Header,
+    Footer,
     EmptyCart,
     Summary,
     StripeCheckout,

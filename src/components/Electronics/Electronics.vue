@@ -1,51 +1,53 @@
 <template>
-  <div class="wrapper" data-app>
-    <Header />
-    <div class="content">
-      <div class="container mb-5">
-        <input
-          type="text"
-          placeholder="Search Here..."
-          class="mt-3 search"
-          v-model="search"
-        />
-        <div class="row">
-          <div
-            class="col-md-4 pointer"
-            id="my-list"
-            @click="productDetails(items)"
-            v-for="items in resultQuery"
-            :key="items.id"
-            :per-page="perPage"
-            :current-page="currentPage"
-            :products="resultQuery"
-          >
-            <img :src="items.imageURL" class="image" />
-            <h5 class="fw-600">
-              {{ items.title }}
-            </h5>
+  <div>
+    <div class="wrapper" data-app>
+      <Header />
+      <div class="content">
+        <div class="container mb-5">
+          <input
+            type="text"
+            placeholder="Search Electronics..."
+            class="mt-3 search"
+            v-model="search"
+          />
+          <div class="row">
+            <div
+              class="col-md-4 pointer"
+              id="my-list"
+              @click="productDetails(items)"
+              v-for="items in resultQuery"
+              :key="items.id"
+            >
+              <img :src="items.imageURL" class="image" />
+              <h5 class="fw-600">
+                {{ items.title }}
+              </h5>
+            </div>
           </div>
-        </div>
-        <div class="pagination">
-          <b-pagination
-            v-model="currentPage"
-            :total-rows="rows"
-            :per-page="perPage"
-            aria-controls="my-list"
-          ></b-pagination>
+          <div class="pagination">
+            <b-pagination
+              v-model="currentPage"
+              :total-rows="rows"
+              :per-page="perPage"
+              aria-controls="my-list"
+            ></b-pagination>
+          </div>
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "../Common/Header.vue";
+import Footer from "../Common/Footer.vue";
 
 export default {
   name: "Home",
   components: {
     Header,
+    Footer,
   },
   data() {
     return {
