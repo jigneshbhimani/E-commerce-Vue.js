@@ -24,8 +24,6 @@
           </div>
         </div>
 
-        <hr />
-
         <div class="row">
           <div class="col">
             <router-link to="/toys">
@@ -46,8 +44,6 @@
             </router-link>
           </div> -->
         </div>
-
-        <hr />
       </div>
     </div>
     <Footer />
