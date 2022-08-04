@@ -79,7 +79,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .class-1,
 .class-3 {
   cursor: pointer;

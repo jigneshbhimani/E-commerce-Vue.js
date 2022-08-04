@@ -11,7 +11,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .success {
   text-align: center;
   font-size: 30px;

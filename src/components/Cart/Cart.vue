@@ -117,7 +117,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .class-1 {
   justify-content: space-between;
   display: flex;

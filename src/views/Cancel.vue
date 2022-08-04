@@ -11,7 +11,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .cancel {
   text-align: center;
   font-size: 30px;

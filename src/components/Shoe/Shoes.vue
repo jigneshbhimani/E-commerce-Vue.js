@@ -102,7 +102,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .container {
   padding: 20px;
   display: flex;
