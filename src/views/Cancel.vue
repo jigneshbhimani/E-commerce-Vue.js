@@ -1,7 +1,7 @@
 <template>
   <div class="cancel">
     <h1>Payment Failed!</h1>
-    <router-link to="/electronics">Buy Again</router-link>
+    <router-link to="/category">Buy Again</router-link>
   </div>
 </template>
 

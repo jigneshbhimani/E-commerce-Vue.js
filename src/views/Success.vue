@@ -1,7 +1,7 @@
 <template>
   <div class="success">
     <h1>Payment is successful</h1>
-    <router-link to="/electronics">Buy Again</router-link>
+    <router-link to="/category">Buy Again</router-link>
   </div>
 </template>
 

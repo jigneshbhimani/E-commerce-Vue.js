@@ -4,12 +4,19 @@
       <Header />
       <div class="content">
         <div class="container mb-5">
-          <input
-            type="text"
-            placeholder="Search Electronics..."
-            class="mt-3 search"
-            v-model="search"
-          />
+          <div class="row">
+            <div class="col">
+              <img src="../../assets/back.png" class="back" @click="back" />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                placeholder="Search Electronics..."
+                class="mt-3 search"
+                v-model="search"
+              />
+            </div>
+          </div>
           <div class="row">
             <div
               class="col-md-4 pointer"
@@ -89,6 +96,9 @@ export default {
         params: items,
       });
     },
+    back() {
+      this.$router.push("/category");
+    },
   },
 };
 </script>
@@ -106,6 +116,15 @@ export default {
   margin: 30px;
   border: 3px solid gainsboro;
   border-radius: 20px;
+}
+.back {
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  margin-left: -35rem;
+  margin-top: 10px;
+  background: gray;
+  border-radius: 30px;
 }
 .image {
   width: 300px;

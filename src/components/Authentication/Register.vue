@@ -97,7 +97,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .heading {
   text-align: center;
   font-weight: 700;

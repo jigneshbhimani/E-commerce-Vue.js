@@ -7,7 +7,7 @@
   </footer>
 </template>
 
-<style>
+<style scoped>
 .footer-copyright {
   color: white;
 }

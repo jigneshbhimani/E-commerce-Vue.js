@@ -30,7 +30,7 @@
         ></path>
       </svg>
     </div>
-    <router-link class="head" to="/category">E - STORE</router-link>
+    <p class="head">E - STORE</p>
     <div class="cart">
       <img @click="goTo" class="image" src="../../assets/products/cart.png" />
       <span class="cart-count">{{ count }}</span>

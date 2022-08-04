@@ -37,12 +37,12 @@
               <img class="image" src="../../assets/shoes.png" />
             </router-link>
           </div>
-          <!-- <div class="col">
-            <router-link to="/shoes">
-              <label class="label">Shoes</label>
-              <img class="image" src="../../assets/shoes.png" />
-            </router-link>
-          </div> -->
+            <!-- <div class="col">
+              <router-link to="/shoes">
+                <label class="label">Shoes</label>
+                <img class="image" src="../../assets/shoes.png" />
+              </router-link>
+            </div> -->
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .col {
   margin-top: 20px;
   display: flex;
