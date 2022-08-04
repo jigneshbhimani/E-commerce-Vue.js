@@ -41,7 +41,7 @@ const routes = [
   },
   {
     path: "/shoes",
-    component: () => import("../components/Shoes/Shoes.vue"),
+    component: () => import("../components/Shoe/Shoes.vue"),
     name: "shoes",
   },
   {
@@ -67,7 +67,7 @@ const routes = [
   {
     path: "/shoes-details/:id",
     name: "shoes-details",
-    component: () => import("../components/Shoes/ShoesDetails.vue"),
+    component: () => import("../components/Shoe/ShoesDetails.vue"),
   },
   {
     path: "/cart",

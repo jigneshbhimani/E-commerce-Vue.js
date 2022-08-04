@@ -329,7 +329,7 @@ export default new Vuex.Store({
     toys: [
       {
         id: 1,
-        name: "car",
+        name: "Car",
         price: "599",
         description: "Racing car with remote",
         color: "White and Blue",
@@ -337,7 +337,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        name: "doll",
+        name: "Doll",
         price: "729",
         description: "Barbie Doll, Cloth and Makeup Things",
         color: "White and Pink",
@@ -373,7 +373,7 @@ export default new Vuex.Store({
         imageURL: asics,
       },
       {
-        id: 3,
+        id: 4,
         title: "Skechers",
         price: "3899",
         brand: "Skechers",
@@ -382,7 +382,7 @@ export default new Vuex.Store({
         imageURL: skechers,
       },
       {
-        id: 3,
+        id: 5,
         title: "Puma",
         price: "3899",
         brand: "Puma",

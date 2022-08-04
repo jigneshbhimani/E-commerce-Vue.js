@@ -37,12 +37,12 @@
               <img class="image" src="../../assets/shoes.png" />
             </router-link>
           </div>
-          <!-- <div class="col">
+          <div class="col">
             <router-link to="/shoes">
               <label class="label">Shoes</label>
               <img class="image" src="../../assets/shoes.png" />
             </router-link>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>

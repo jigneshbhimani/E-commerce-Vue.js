@@ -30,7 +30,7 @@
         ></path>
       </svg>
     </div>
-    <router-link class="head" to="/category">E - STORE</router-link>
+    <p class="head">E - STORE</p>
     <div class="cart">
       <img @click="goTo" class="image" src="../../assets/products/cart.png" />
       <span class="cart-count">{{ count }}</span>
@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .class-1 {
   width: 30px;
   height: 30px;
@@ -100,7 +100,7 @@ export default {
   background: black;
 }
 .head {
-  font-size: 30px;
+  font-size: 27px;
   font-weight: 700;
   color: dodgerblue;
   margin: inherit;
